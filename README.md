@@ -15,7 +15,7 @@ Terraform module to create AWS ElastiCache cluster for Memcached engine.
 - [Dependencies](#Dependencies)
 - [Terraform Versions](#Terraform_Versions)
 - [Terraform Providers](#Terraform_Providers)
-- [Getting Started](#Getting Started)
+- [Getting Started](#Getting_Started)
 - [Inputs](#Inputs)
 - [Outputs](#Outputs)
 - [Contributing](#Contributing)
