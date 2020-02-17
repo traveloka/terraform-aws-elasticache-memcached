@@ -51,6 +51,40 @@ Created and tested using Terraform version `0.11.14`
 ## Getting Started
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:-----:|
+| apply\_immediately | Whether to apply cluster changes immediately, or during maintenance window | `string` | n/a | yes |
+| az\_mode | Whether to provision in single-az or cross-az | `string` | n/a | yes |
+| description | Description of what this memcached used for | `string` | `""` | no |
+| engine\_version | Version of memcached engine for this cluster | `string` | `""` | no |
+| environment | Environment of this memcached resides in | `string` | n/a | yes |
+| maintenance\_window | Preferred maintenance window for this memcached | `string` | n/a | yes |
+| node\_type | Node type for this memcached | `string` | n/a | yes |
+| notification\_topic\_arn | ARN of the SNS topic that should receive notification about this memcached cluster | `string` | `""` | no |
+| num\_cache\_nodes | Number of cache nodes for this memcached | `string` | n/a | yes |
+| parameter\_group\_name | Name of the parameter group used by this memcached cluster | `string` | n/a | yes |
+| port | Port used for this memcached | `string` | `"11211"` | no |
+| product\_domain | Product domain abbreviation this memcached belongs to | `string` | n/a | yes |
+| security\_group\_ids | IDs of security groups to be attached to this memcached cluster | `list` | n/a | yes |
+| service\_name | Name of the service this memcached belongs to | `string` | n/a | yes |
+| subnet\_group\_name | Name of the subnet group this cluster resides in | `string` | n/a | yes |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| az\_mode | The provisioning mode of this memcached |
+| cluster\_id | The cluster identifier of this memcached |
+| configuration\_endpoint | The configuration endpoint of this memcached |
+| endpoint | The endpoint of this memcached |
+| parameter\_group\_name | The parameter group used by this memcached |
+| port | Port used for this memcached |
+| security\_group\_ids | The security groups attached to this memcached |
+| subnet\_group\_name | The subnet group name where this memcached resides in |
+
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Contributing
