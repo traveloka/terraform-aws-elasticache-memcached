@@ -29,7 +29,7 @@ In order to provision this module, it is require some information from an existi
 - ElastiCache Parameter Group, input variable that require the information from this resource are, `parameter_group_name` 
 - Security Group,  input variable that require the information from this resource are, `security_group_ids` 
 - ElastiCache Subnet Group,  input variable that require the information from this resource are, `subnet_group_name`
-- SNS Topic, input variable that require the information from this resource are, `notification_topic_arn`
+- (optional) SNS Topic, input variable that require the information from this resource are, `notification_topic_arn`
 
 Please note that some of the above resources may be optional it depends on the parameter you filled in the module input
 
