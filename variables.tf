@@ -76,3 +76,9 @@ variable "az_mode" {
   description = "Whether to provision in single-az or cross-az"
   type        = "string"
 }
+
+variable "additional_tags" {
+  type        = "map"
+  default     = {}
+  description = "Common additional tags"
+}

@@ -31,12 +31,13 @@ resource "aws_elasticache_cluster" "this" {
 
   notification_topic_arn = "${var.notification_topic_arn}"
 
-  tags = {
-    Name          = "${random_id.cluster_id.hex}"
-    Environment   = "${var.environment}"
-    ProductDomain = "${var.product_domain}"
-    Service       = "${var.service_name}"
-    Description   = "${var.description}"
-    ManagedBy     = "Terraform"
-  }
+  tags = "${merge(
+    var.additional_tags,
+    map("Name", random_id.cluster_id.hex),
+    map("Environment", var.environment),
+    map("ProductDomain", var.product_domain),
+    map("Service", var.service_name),
+    map("Description", var.description),
+    map("ManagedBy", "terraform")
+  )}"
 }
