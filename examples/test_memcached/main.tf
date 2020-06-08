@@ -28,4 +28,8 @@ module "test_memcached" {
   apply_immediately    = "true"
 
   security_group_ids = ["${data.aws_security_group.default.id}"]
+
+  additional_tags = {
+    testingtag = "test"
+  }
 }

@@ -71,6 +71,7 @@ Created and tested using Terraform version `0.11.14`
 | security\_group\_ids | IDs of security groups to be attached to this memcached cluster | `list` | n/a | yes |
 | service\_name | Name of the service this memcached belongs to | `string` | n/a | yes |
 | subnet\_group\_name | Name of the subnet group this cluster resides in | `string` | n/a | yes |
+| additional\_tags | Additional tags for elasticahe instance | map | {} | no |
 
 ## Outputs
 
